@@ -1,0 +1,9 @@
+.CodeMirror{
+	font-family: "IBM Plex Mono";
+	font-size: 14px;
+}
+
+div.output pre {
+    font-size: 13px;
+		font-family: "IBM Plex Mono";
+}

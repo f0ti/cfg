@@ -120,6 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias open="xdg-open"
 alias jn="jupyter-notebook"
+alias ooo="cmatrix"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -135,4 +136,33 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+bright (){
+  xrandr --output DP-2 --brightness $1	
+}
+
+ports (){
+  sudo netstat -tulpn
+}
+
+# add path
+export PATH="/opt/zotero:$PATH"
+export PATH="/home/foti/.local/bin/:$PATH"
+export PATH="/opt/go/bin/:$PATH"
+export PATH="/home/foti/go/bin/:$PATH"
+export PATH="/home/foti/lilypond/usr/bin/:$PATH"
+export PATH="/opt/skype/usr/bin/:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# cuda
+export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda-11.8/bin:$PATH
+
+export GUROBI_HOME="/opt/gurobi911/linux64"
+export PATH="${PATH}:${GUROBI_HOME}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+export GUROBI_PATH="${GUROBI_HOME}"
 
